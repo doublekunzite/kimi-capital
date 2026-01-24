@@ -105,7 +105,7 @@ function loadPostsList() {
   const posts = [
     {
       filename: 'US-dialectic.md',
-      title: 'Kimi analyzes the US government's recent actions',
+      title: 'Kimi analyzes the US government\'s recent actions',
       date: '2026-01-23'
     }
   ];
