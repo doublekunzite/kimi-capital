@@ -1,37 +1,54 @@
-// Security: Sanitize filename to prevent path traversal
+// Debug helper
+function log(msg, data = null) {
+  console.log(`[Kimi & Capital] ${msg}`, data || '');
+}
+
+// Security: Sanitize filename
 function sanitizeFilename(filename) {
-  return filename.replace(/[^a-zA-Z0-9\-_.]/g, '').replace(/\.\./g, '');
+  const sanitized = filename.replace(/[^a-zA-Z0-9\-_.]/g, '').replace(/\.\./g, '');
+  log('Sanitized filename:', { original: filename, sanitized });
+  return sanitized;
 }
 
 // Parse URL parameters
 function getParam(name) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(name);
+  const value = new URLSearchParams(window.location.search).get(name);
+  log('URL param fetched:', { name, value });
+  return value;
 }
 
-// Load and parse markdown file
+// Load post file
 async function loadPost(filename) {
   try {
     const safeFilename = sanitizeFilename(filename);
-    const response = await fetch(`posts/${safeFilename}`);
+    const path = `posts/${safeFilename}`;
+    log('Attempting to fetch:', path);
+    
+    const response = await fetch(path);
+    
+    if (!response.ok) {
+      log('Fetch failed:', { status: response.status, statusText: response.statusText });
+      return [];
+    }
+    
     const markdown = await response.text();
+    log('Markdown loaded, length:', markdown.length);
     return parseMarkdownChat(markdown);
   } catch (error) {
-    return []; // Fail silently in production
+    log('Error in loadPost:', error.message);
+    return [];
   }
 }
 
-// Split markdown into user/AI messages
+// Parse markdown into messages
 function parseMarkdownChat(markdown) {
   const lines = markdown.split('\n');
   const messages = [];
   let currentMessage = null;
-  let isUser = false;
 
   for (const line of lines) {
     if (line.trim().startsWith('> ')) {
       if (currentMessage) messages.push(currentMessage);
-      isUser = true;
       currentMessage = {
         role: 'user',
         content: line.replace('> ', '')
@@ -45,22 +62,24 @@ function parseMarkdownChat(markdown) {
   }
 
   if (currentMessage) messages.push(currentMessage);
+  log('Parsed messages:', messages.length);
   return messages;
 }
 
 // Render chat bubbles with XSS protection
 function renderChat(messages) {
   const container = document.getElementById('chat-container');
+  log('Rendering to container:', container ? 'found' : 'MISSING');
+  
   if (!container) return;
 
-  messages.forEach(msg => {
+  messages.forEach((msg, i) => {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${msg.role}-message`;
     
     const bubble = document.createElement('div');
     bubble.className = 'bubble';
     
-    // Security: Parse markdown then sanitize HTML output
     const rawHTML = marked.parse(msg.content);
     bubble.innerHTML = DOMPurify.sanitize(rawHTML, {
       ALLOWED_TAGS: ['p', 'h1', 'h2', 'h3', 'h4', 'ul', 'ol', 'li', 'code', 'pre', 'strong', 'em', 'a', 'blockquote'],
@@ -72,10 +91,17 @@ function renderChat(messages) {
   });
 }
 
-// Load posts list for index page
-async function loadPostsList() {
-  if (!document.getElementById('posts-list')) return;
+// Load posts list
+function loadPostsList() {
+  log('Loading posts list...');
+  
+  const container = document.getElementById('posts-list');
+  if (!container) {
+    log('ERROR: #posts-list element not found!');
+    return;
+  }
 
+  // Your posts array (as provided)
   const posts = [
     {
       filename: 'US-dialectic.md',
@@ -84,23 +110,34 @@ async function loadPostsList() {
     }
   ];
 
-  const container = document.getElementById('posts-list');
+  log('Posts array:', posts);
+
+  if (posts.length === 0) {
+    container.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">No posts yet.</p>';
+    return;
+  }
+
   posts.forEach(post => {
     const link = document.createElement('a');
-    link.href = `post.html?post=${post.filename}`;
+    link.href = `post.html?post=${encodeURIComponent(post.filename)}`;
     link.innerHTML = `
       <div class="post-title">${post.title}</div>
       <div class="post-date">${post.date}</div>
     `;
     container.appendChild(link);
   });
+  
+  log('Posts rendered successfully');
 }
 
 // Initialize
 document.addEventListener('DOMContentLoaded', async () => {
+  log('DOM ready, initializing...');
+  
   const postFile = getParam('post');
   
   if (postFile) {
+    log('Post view mode:', postFile);
     const messages = await loadPost(postFile);
     renderChat(messages);
     
@@ -110,6 +147,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         `${firstLine.substring(0, 50)}... | Kimi & Capital`;
     }
   } else {
+    log('Index view mode');
     loadPostsList();
   }
 });
