@@ -5,6 +5,9 @@ on:
       - 'posts/*.md'
       - 'generate-posts-json.js'
 
+permissions:
+  contents: write  # ← Add this
+
 jobs:
   generate:
     runs-on: ubuntu-latest
