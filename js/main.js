@@ -6,34 +6,22 @@ function getParam(name) {
   return new URLSearchParams(window.location.search).get(name);
 }
 
-// Auto-detect base path for GitHub Pages
-function getBasePath() {
-  const pathParts = window.location.pathname.split('/');
-  if (pathParts[1] && pathParts[1] !== 'index.html') {
-    return `/${pathParts[1]}`;
-  }
-  return '';
-}
-
 async function loadPost(filename) {
-  const basePath = getBasePath();
-  const safeFilename = sanitizeFilename(filename);
-  const fullPath = `${basePath}/posts/${safeFilename}`;
-  
-  console.log('[Debug] Fetching:', fullPath); // Check console for URL
-  
   try {
-    const response = await fetch(fullPath);
+    const safeFilename = sanitizeFilename(filename);
+    // Use relative path - works on GitHub Pages AND locally
+    const response = await fetch(`posts/${safeFilename}`);
+    
     if (!response.ok) {
-      console.error('[Debug] Fetch failed:', response.status, response.statusText);
+      console.error('❌ Fetch failed:', response.status, response.statusText);
       return { metadata: {}, messages: [] };
     }
     
     const markdown = await response.text();
-    console.log('[Debug] Markdown loaded, length:', markdown.length);
+    console.log('✅ Markdown loaded, length:', markdown.length);
     return parseMarkdownWithFrontmatter(markdown);
   } catch (error) {
-    console.error('[Debug] Error:', error);
+    console.error('❌ Error:', error);
     return { metadata: {}, messages: [] };
   }
 }
@@ -97,7 +85,6 @@ function renderChat(metadata, messages) {
   const container = document.getElementById('chat-container');
   if (!container) return;
 
-  // Render from metadata
   const title = document.createElement('h2');
   title.className = 'post-header-title';
   title.textContent = metadata.title || 'Untitled Post';
@@ -142,17 +129,18 @@ async function loadPostsList() {
   const container = document.getElementById('posts-list');
   if (!container) return;
 
-  const basePath = getBasePath();
-  
   try {
-    const response = await fetch(`${basePath}/posts.json`);
+    // Use relative path
+    const response = await fetch('posts.json');
+    
     if (!response.ok) {
-      console.error('Failed to load posts.json:', response.status);
+      console.error('❌ Failed to load posts.json:', response.status);
       return;
     }
     
     const posts = await response.json();
-    
+    console.log('✅ Loaded posts:', posts.length);
+
     if (posts.length === 0) {
       container.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">No posts yet.</p>';
       return;
@@ -168,16 +156,18 @@ async function loadPostsList() {
       container.appendChild(link);
     });
   } catch (error) {
-    console.error('Error loading posts:', error);
+    console.error('❌ Error loading posts:', error);
   }
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
   const postFile = getParam('post');
   if (postFile) {
+    console.log('🔍 Loading post:', postFile);
     const { metadata, messages } = await loadPost(postFile);
     renderChat(metadata, messages);
   } else {
+    console.log('🔍 Loading posts list');
     loadPostsList();
   }
 });
