@@ -55,7 +55,7 @@ function renderChat(messages) {
   const container = document.getElementById('chat-container');
   if (!container) return;
 
-  // Add title above first prompt
+  // Add title
   const title = document.createElement('h2');
   title.className = 'post-header-title';
   title.textContent = 'Dialectical Materialist Analysis: US Government Actions January 2026';
@@ -68,8 +68,16 @@ function renderChat(messages) {
     const bubble = document.createElement('div');
     bubble.className = 'bubble';
     
+    // Add label to user prompts
+    if (msg.role === 'user') {
+      const label = document.createElement('span');
+      label.className = 'user-label';
+      label.textContent = 'You asked:';
+      bubble.appendChild(label);
+    }
+    
     const rawHTML = marked.parse(msg.content);
-    bubble.innerHTML = DOMPurify.sanitize(rawHTML, {
+    bubble.innerHTML += DOMPurify.sanitize(rawHTML, {
       ALLOWED_TAGS: ['p', 'h1', 'h2', 'h3', 'h4', 'ul', 'ol', 'li', 'code', 'pre', 'strong', 'em', 'a', 'blockquote'],
       ALLOWED_ATTR: ['href']
     });
@@ -90,11 +98,6 @@ function loadPostsList() {
       date: '2026-01-23'
     }
   ];
-
-  if (posts.length === 0) {
-    container.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">No posts yet.</p>';
-    return;
-  }
 
   posts.forEach(post => {
     const link = document.createElement('a');

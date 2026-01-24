@@ -1,35 +1,39 @@
 :root {
-  --bg-dark: #1a1a1a;
-  --bg-medium: #2a2a2a;
-  --kimi-blue: #4a9eff;
+  --bg-dark: #121212;
+  --bg-medium: #1e1e1e;
+  --bg-light: #2a2a2a;
+  --kimi-blue: #4dabf7;
   --capital-red: #ff6b6b;
   --text-primary: #e0e0e0;
   --text-secondary: #a0a0a0;
-  --bubble-user: #3a3a3a;
+  --text-muted: #7a7a7a;
+  --bubble-user: #2d3748;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: var(--bg-dark);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-size: 17px;
 }
 
 header {
   background: var(--bg-medium);
-  padding: 2rem;
+  padding: 3rem 2rem;
   text-align: center;
-  border-bottom: 2px solid var(--kimi-blue);
+  border-bottom: 1px solid var(--bg-light);
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
 }
 
 .kimi { color: var(--kimi-blue); }
@@ -38,18 +42,19 @@ h1 {
 .tagline {
   color: var(--text-secondary);
   margin-top: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 300;
 }
 
 main {
   flex: 1;
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
   width: 100%;
 }
 
-/* Blog listing */
+/* Blog listing unchanged */
 #posts-list a {
   display: block;
   padding: 1.5rem;
@@ -70,47 +75,51 @@ main {
 .post-title { font-size: 1.3rem; margin-bottom: 0.5rem; }
 .post-date { color: var(--text-secondary); font-size: 0.85rem; }
 
-/* Chat container */
+/* Post page styling */
 #chat-container {
-  padding: 1rem 0;
+  padding: 0;
 }
 
-/* Post Title - NEW */
 .post-header-title {
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  color: var(--kimi-blue);
-  text-align: center;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--bg-medium);
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  line-height: 1.3;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--bg-light);
 }
 
-/* Messages */
-.message {
-  margin-bottom: 2rem;
-}
-
-/* User prompt bubble - White text */
+/* User prompt - Softer, labeled */
 .user-message {
-  display: flex;
-  justify-content: flex-end;
+  margin-bottom: 3rem;
 }
 
 .user-message .bubble {
-  max-width: 80%;
-  padding: 1rem 1.5rem;
+  max-width: 85%;
+  margin-left: auto;
+  padding: 1.2rem 1.5rem;
   background: var(--bubble-user);
-  color: #ffffff; /* WHITE TEXT */
-  border-radius: 18px;
-  border-bottom-right-radius: 4px;
-  line-height: 1.5;
+  color: var(--text-primary);
+  border-radius: 16px;
+  border-bottom-right-radius: 6px;
+  font-size: 1rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* AI response - Plain text, no bubble */
+.user-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* AI response - Magazine-style */
 .ai-message {
-  padding: 0;
-  margin: 1.5rem 0;
+  margin: 2.5rem 0;
 }
 
 .ai-message .bubble {
@@ -118,52 +127,81 @@ main {
   padding: 0;
   background: transparent;
   color: var(--text-primary);
-  border-radius: 0;
-  line-height: 1.7;
 }
 
-/* Divider lines between sections - NEW */
+/* Section headers - Distinctive */
 .ai-message .bubble h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--bg-medium);
-}
-
-.ai-message .bubble h2:first-of-type {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none;
-}
-
-/* Markdown styling */
-.bubble h1, .bubble h2, .bubble h3, .bubble h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 3rem 0 1.2rem;
+  padding-top: 2rem;
   color: var(--kimi-blue);
-  margin: 1.5rem 0 0.8rem;
+  position: relative;
 }
 
-.bubble p { margin-bottom: 1rem; }
-.bubble ul, .bubble ol { margin: 0.5rem 0 1rem 1.5rem; }
+.ai-message .bubble h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--bg-light), transparent);
+}
+
+.ai-message .bubble h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 1.8rem 0 0.8rem;
+  color: var(--capital-red);
+}
+
+/* Paragraph spacing */
+.ai-message .bubble p {
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+}
+
+.ai-message .bubble ul,
+.ai-message .bubble ol {
+  margin: 0.8rem 0 1.2rem 2rem;
+}
+
+.ai-message .bubble li {
+  margin-bottom: 0.6rem;
+}
+
+/* Code blocks */
 .bubble code {
-  background: var(--bg-dark);
-  padding: 0.2rem 0.4rem;
+  background: var(--bg-medium);
+  padding: 0.25rem 0.4rem;
   border-radius: 4px;
-  font-family: 'Courier New', monospace;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.9em;
 }
 
 .bubble pre {
-  background: var(--bg-dark);
-  padding: 1rem;
+  background: var(--bg-medium);
+  padding: 1.2rem;
   border-radius: 8px;
   overflow-x: auto;
-  margin: 1rem 0;
+  margin: 1.2rem 0;
+  border: 1px solid var(--bg-light);
 }
 
-footer {
-  text-align: center;
-  padding: 2rem;
+/* Blockquotes */
+.bubble blockquote {
+  border-left: 3px solid var(--kimi-blue);
+  padding-left: 1.2rem;
+  margin: 1.2rem 0;
   color: var(--text-secondary);
-  margin-top: auto;
+  font-style: italic;
 }
 
-footer a { color: var(--kimi-blue); text-decoration: none; }
+/* Mobile */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  main { padding: 2rem 1rem; }
+  .post-header-title { font-size: 1.8rem; }
+  .user-message .bubble { max-width: 90%; }
+}

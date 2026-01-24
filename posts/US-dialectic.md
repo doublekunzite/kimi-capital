@@ -2,7 +2,7 @@
 
 ## **I. Historical Materialist Context: The Crisis of Late Imperialism**
 
-The US government's actions this week reflect **terminal-stage capitalist contradictions**—not policy choices, but structural necessities imposed by the **base-superstructure crisis**. The economic base (overaccumulation, declining rate of profit, loss of hegemony) is forcing the superstructure (state institutions, ideology) into increasingly **coercive**, rather than consensual, forms of rule .
+The US government's actions this week reflect **terminal-stage capitalist contradictions**—not policy choices, but structural necessities imposed by the **base-superstructure crisis**. The economic base (overaccumulation, declining rate of profit, loss of hegemony) is forcing the superstructure (state institutions, ideology) into increasingly **coercive**, rather than consensual, forms of rule.
 
 **Key Contradiction**: The US bourgeoisie faces an **insurmountable gap** between its **global imperial obligations** (maintaining 800+ military bases, dollar supremacy) and its **eroding domestic productive base** (deindustrialization, financialization, Chinese competition). This drives a **dual strategy**: external aggression to reassert hegemony, and internal repression to manage social fallout.
 
@@ -119,7 +119,7 @@ All policies serve to:
 3. **Obstruct class consciousness** (culture wars, xenophobia)
 
 ### **Secondary Contradictions Intensifying**
-- **Inter-imperialist rivalry** (vs. China, even vs. Denmark)
+- **Inter-imperialist rivalry** (vs. Denmark, Canada, Europe)
 - **Intra-bourgeoisie conflict** (globalist vs. nativist capital)
 - **State legitimacy crisis** (courts blocking policies, mass resignations)
 
