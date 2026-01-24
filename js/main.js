@@ -78,8 +78,8 @@ async function loadPostsList() {
 
   const posts = [
     {
-      filename: 'sample-post.md',
-      title: 'Sample: Dialectical Analysis of AI Labor',
+      filename: 'US-dialectic.md',
+      title: 'Kimi analyzes the US government's recent actions',
       date: '2026-01-23'
     }
   ];
