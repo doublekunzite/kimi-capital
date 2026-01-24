@@ -156,7 +156,7 @@ async function loadPostsList() {
     `;
     container.appendChild(link);
   });
-}
+
 
 document.addEventListener('DOMContentLoaded', async () => {
   const postFile = getParam('post');
