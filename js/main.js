@@ -10,20 +10,42 @@ async function loadPost(filename) {
   try {
     const safeFilename = sanitizeFilename(filename);
     const response = await fetch(`posts/${safeFilename}`);
-    if (!response.ok) return [];
+    if (!response.ok) return { metadata: {}, messages: [] };
     const markdown = await response.text();
-    return parseMarkdownChat(markdown);
+    return parseMarkdownWithFrontmatter(markdown);
   } catch (error) {
-    return [];
+    return { metadata: {}, messages: [] };
   }
 }
 
-function parseMarkdownChat(markdown) {
+function parseMarkdownWithFrontmatter(markdown) {
   const lines = markdown.split('\n');
-  const messages = [];
-  let currentMessage = null;
+  let pos = 0;
+  let metadata = {};
+  let messages = [];
 
-  for (const line of lines) {
+  // Parse frontmatter
+  if (lines[0] && lines[0].trim() === '---') {
+    pos++;
+    while (pos < lines.length && lines[pos].trim() !== '---') {
+      const line = lines[pos];
+      const colonIndex = line.indexOf(':');
+      if (colonIndex > -1) {
+        const key = line.substring(0, colonIndex).trim();
+        const value = line.substring(colonIndex + 1).trim().replace(/^["']|["']$/g, '');
+        metadata[key] = value;
+      }
+      pos++;
+    }
+    if (lines[pos] && lines[pos].trim() === '---') {
+      pos++; // Skip closing ---
+    }
+  }
+
+  // Parse messages from remaining content
+  let currentMessage = null;
+  for (; pos < lines.length; pos++) {
+    const line = lines[pos];
     const trimmed = line.trim();
     
     if (trimmed.startsWith('> ')) {
@@ -48,18 +70,28 @@ function parseMarkdownChat(markdown) {
   }
 
   if (currentMessage) messages.push(currentMessage);
-  return messages;
+  return { metadata, messages };
 }
 
-function renderChat(messages) {
+function renderChat(metadata, messages) {
   const container = document.getElementById('chat-container');
   if (!container) return;
 
-  // Add title
+  // Render from metadata
   const title = document.createElement('h2');
   title.className = 'post-header-title';
-  title.textContent = 'Dialectical Materialist Analysis: US Government Actions January 2026';
+  title.textContent = metadata.title || 'Untitled Post';
   container.appendChild(title);
+
+  if (metadata.date || metadata.author) {
+    const meta = document.createElement('div');
+    meta.className = 'post-meta';
+    const parts = [];
+    if (metadata.date) parts.push(metadata.date);
+    if (metadata.author) parts.push(`by ${metadata.author}`);
+    meta.innerHTML = parts.join(' &nbsp;&bull;&nbsp; ');
+    container.appendChild(meta);
+  }
 
   messages.forEach(msg => {
     const messageDiv = document.createElement('div');
@@ -68,7 +100,6 @@ function renderChat(messages) {
     const bubble = document.createElement('div');
     bubble.className = 'bubble';
     
-    // Add label to user prompts
     if (msg.role === 'user') {
       const label = document.createElement('span');
       label.className = 'user-label';
@@ -87,17 +118,34 @@ function renderChat(messages) {
   });
 }
 
-function loadPostsList() {
+// ... keep all functions above, replace loadPostsList:
+
+async function loadPostsList() {
   const container = document.getElementById('posts-list');
   if (!container) return;
 
-  const posts = [
-    {
-      filename: 'US-dialectic.md',
-      title: 'Kimi analyzes the US government\'s recent actions',
-      date: '2026-01-23'
+  try {
+    const response = await fetch('posts.json');
+    const posts = await response.json();
+    
+    if (posts.length === 0) {
+      container.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">No posts yet.</p>';
+      return;
     }
-  ];
+
+    posts.forEach(post => {
+      const link = document.createElement('a');
+      link.href = `post.html?post=${encodeURIComponent(post.filename)}`;
+      link.innerHTML = `
+        <div class="post-title">${post.title}</div>
+        <div class="post-date">${post.date}</div>
+      `;
+      container.appendChild(link);
+    });
+  } catch (error) {
+    container.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">Failed to load posts.</p>';
+  }
+}
 
   posts.forEach(post => {
     const link = document.createElement('a');
@@ -112,10 +160,9 @@ function loadPostsList() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   const postFile = getParam('post');
-  
   if (postFile) {
-    const messages = await loadPost(postFile);
-    renderChat(messages);
+    const { metadata, messages } = await loadPost(postFile);
+    renderChat(metadata, messages);
   } else {
     loadPostsList();
   }

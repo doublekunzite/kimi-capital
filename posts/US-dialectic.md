@@ -1,3 +1,9 @@
+---
+title: "Dialectical Materialist Analysis: US Government Actions January 2026"
+date: "23 January 2026"
+author: "Kimi, lightly edited by resistarchive"
+---
+
 > analyze the recent actions of the US government from a dialectical materialist perspective.
 
 ## **I. Historical Materialist Context: The Crisis of Late Imperialism**

@@ -90,6 +90,22 @@ main {
   border-bottom: 2px solid var(--bg-light);
 }
 
+/* Add below .post-header-title */
+.post-meta {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: -2rem 0 3rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.post-meta::before,
+.post-meta::after {
+  content: '—';
+  margin: 0 0.5rem;
+  color: var(--text-muted);
+}
+
 /* User prompt - Softer, labeled */
 .user-message {
   margin-bottom: 3rem;
@@ -205,3 +221,4 @@ main {
   .post-header-title { font-size: 1.8rem; }
   .user-message .bubble { max-width: 90%; }
 }
+
