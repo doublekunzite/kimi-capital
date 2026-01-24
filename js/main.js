@@ -147,16 +147,6 @@ async function loadPostsList() {
   }
 }
 
-  posts.forEach(post => {
-    const link = document.createElement('a');
-    link.href = `post.html?post=${encodeURIComponent(post.filename)}`;
-    link.innerHTML = `
-      <div class="post-title">${post.title}</div>
-      <div class="post-date">${post.date}</div>
-    `;
-    container.appendChild(link);
-  });
-
 
 document.addEventListener('DOMContentLoaded', async () => {
   const postFile = getParam('post');
