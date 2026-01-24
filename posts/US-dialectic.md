@@ -1,7 +1,5 @@
 > analyze the recent actions of the US government from a dialectical materialist perspective.
 
-# **Dialectical Materialist Analysis: US Government Actions January 2026**
-
 ## **I. Historical Materialist Context: The Crisis of Late Imperialism**
 
 The US government's actions this week reflect **terminal-stage capitalist contradictions**—not policy choices, but structural necessities imposed by the **base-superstructure crisis**. The economic base (overaccumulation, declining rate of profit, loss of hegemony) is forcing the superstructure (state institutions, ideology) into increasingly **coercive**, rather than consensual, forms of rule .

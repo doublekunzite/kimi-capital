@@ -1,14 +1,11 @@
-// Security: Sanitize filename
 function sanitizeFilename(filename) {
   return filename.replace(/[^a-zA-Z0-9\-_.]/g, '').replace(/\.\./g, '');
 }
 
-// Parse URL parameters
 function getParam(name) {
   return new URLSearchParams(window.location.search).get(name);
 }
 
-// Load post file
 async function loadPost(filename) {
   try {
     const safeFilename = sanitizeFilename(filename);
@@ -21,7 +18,6 @@ async function loadPost(filename) {
   }
 }
 
-// FIXED: Properly parse both prompts and responses
 function parseMarkdownChat(markdown) {
   const lines = markdown.split('\n');
   const messages = [];
@@ -30,45 +26,40 @@ function parseMarkdownChat(markdown) {
   for (const line of lines) {
     const trimmed = line.trim();
     
-    // User prompt detected
     if (trimmed.startsWith('> ')) {
       if (currentMessage) messages.push(currentMessage);
       currentMessage = {
         role: 'user',
-        content: line.replace(/^>\s?/, '') // Remove > and optional space
+        content: line.replace(/^>\s?/, '')
       };
-    } 
-    // Empty line - push current message
-    else if (trimmed === '') {
-      if (currentMessage) {
-        messages.push(currentMessage);
-        currentMessage = null;
-      }
-    } 
-    // AI response line
-    else {
+    } else if (trimmed === '' && currentMessage) {
+      messages.push(currentMessage);
+      currentMessage = null;
+    } else {
       if (!currentMessage) {
-        // Start new AI message if none exists
         currentMessage = {
           role: 'ai',
           content: line
         };
       } else {
-        // Append to existing message
         currentMessage.content += '\n' + line;
       }
     }
   }
 
-  // Push final message
   if (currentMessage) messages.push(currentMessage);
   return messages;
 }
 
-// Render chat bubbles with XSS protection
 function renderChat(messages) {
   const container = document.getElementById('chat-container');
   if (!container) return;
+
+  // Add title above first prompt
+  const title = document.createElement('h2');
+  title.className = 'post-header-title';
+  title.textContent = 'Dialectical Materialist Analysis: US Government Actions January 2026';
+  container.appendChild(title);
 
   messages.forEach(msg => {
     const messageDiv = document.createElement('div');
@@ -88,7 +79,6 @@ function renderChat(messages) {
   });
 }
 
-// Load posts list
 function loadPostsList() {
   const container = document.getElementById('posts-list');
   if (!container) return;
@@ -117,19 +107,12 @@ function loadPostsList() {
   });
 }
 
-// Initialize
 document.addEventListener('DOMContentLoaded', async () => {
   const postFile = getParam('post');
   
   if (postFile) {
     const messages = await loadPost(postFile);
     renderChat(messages);
-    
-    if (messages.length > 0) {
-      const firstLine = messages[0].content.split('\n')[0];
-      document.getElementById('post-title').textContent = 
-        `${firstLine.substring(0, 50)}... | Kimi & Capital`;
-    }
   } else {
     loadPostsList();
   }
