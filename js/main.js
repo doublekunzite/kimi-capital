@@ -1,79 +1,76 @@
-// Debug helper
-function log(msg, data = null) {
-  console.log(`[Kimi & Capital] ${msg}`, data || '');
-}
-
 // Security: Sanitize filename
 function sanitizeFilename(filename) {
-  const sanitized = filename.replace(/[^a-zA-Z0-9\-_.]/g, '').replace(/\.\./g, '');
-  log('Sanitized filename:', { original: filename, sanitized });
-  return sanitized;
+  return filename.replace(/[^a-zA-Z0-9\-_.]/g, '').replace(/\.\./g, '');
 }
 
 // Parse URL parameters
 function getParam(name) {
-  const value = new URLSearchParams(window.location.search).get(name);
-  log('URL param fetched:', { name, value });
-  return value;
+  return new URLSearchParams(window.location.search).get(name);
 }
 
 // Load post file
 async function loadPost(filename) {
   try {
     const safeFilename = sanitizeFilename(filename);
-    const path = `posts/${safeFilename}`;
-    log('Attempting to fetch:', path);
-    
-    const response = await fetch(path);
-    
-    if (!response.ok) {
-      log('Fetch failed:', { status: response.status, statusText: response.statusText });
-      return [];
-    }
-    
+    const response = await fetch(`posts/${safeFilename}`);
+    if (!response.ok) return [];
     const markdown = await response.text();
-    log('Markdown loaded, length:', markdown.length);
     return parseMarkdownChat(markdown);
   } catch (error) {
-    log('Error in loadPost:', error.message);
     return [];
   }
 }
 
-// Parse markdown into messages
+// FIXED: Properly parse both prompts and responses
 function parseMarkdownChat(markdown) {
   const lines = markdown.split('\n');
   const messages = [];
   let currentMessage = null;
 
   for (const line of lines) {
-    if (line.trim().startsWith('> ')) {
+    const trimmed = line.trim();
+    
+    // User prompt detected
+    if (trimmed.startsWith('> ')) {
       if (currentMessage) messages.push(currentMessage);
       currentMessage = {
         role: 'user',
-        content: line.replace('> ', '')
+        content: line.replace(/^>\s?/, '') // Remove > and optional space
       };
-    } else if (line.trim() === '' && currentMessage) {
-      messages.push(currentMessage);
-      currentMessage = null;
-    } else if (currentMessage) {
-      currentMessage.content += '\n' + line;
+    } 
+    // Empty line - push current message
+    else if (trimmed === '') {
+      if (currentMessage) {
+        messages.push(currentMessage);
+        currentMessage = null;
+      }
+    } 
+    // AI response line
+    else {
+      if (!currentMessage) {
+        // Start new AI message if none exists
+        currentMessage = {
+          role: 'ai',
+          content: line
+        };
+      } else {
+        // Append to existing message
+        currentMessage.content += '\n' + line;
+      }
     }
   }
 
+  // Push final message
   if (currentMessage) messages.push(currentMessage);
-  log('Parsed messages:', messages.length);
   return messages;
 }
 
 // Render chat bubbles with XSS protection
 function renderChat(messages) {
   const container = document.getElementById('chat-container');
-  log('Rendering to container:', container ? 'found' : 'MISSING');
-  
   if (!container) return;
 
-  messages.forEach((msg, i) => {
+  messages.forEach(msg => {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${msg.role}-message`;
     
@@ -93,15 +90,9 @@ function renderChat(messages) {
 
 // Load posts list
 function loadPostsList() {
-  log('Loading posts list...');
-  
   const container = document.getElementById('posts-list');
-  if (!container) {
-    log('ERROR: #posts-list element not found!');
-    return;
-  }
+  if (!container) return;
 
-  // Your posts array (as provided)
   const posts = [
     {
       filename: 'US-dialectic.md',
@@ -109,8 +100,6 @@ function loadPostsList() {
       date: '2026-01-23'
     }
   ];
-
-  log('Posts array:', posts);
 
   if (posts.length === 0) {
     container.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">No posts yet.</p>';
@@ -126,18 +115,13 @@ function loadPostsList() {
     `;
     container.appendChild(link);
   });
-  
-  log('Posts rendered successfully');
 }
 
 // Initialize
 document.addEventListener('DOMContentLoaded', async () => {
-  log('DOM ready, initializing...');
-  
   const postFile = getParam('post');
   
   if (postFile) {
-    log('Post view mode:', postFile);
     const messages = await loadPost(postFile);
     renderChat(messages);
     
@@ -147,7 +131,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         `${firstLine.substring(0, 50)}... | Kimi & Capital`;
     }
   } else {
-    log('Index view mode');
     loadPostsList();
   }
 });
