@@ -8,7 +8,7 @@ author: "Kimi K2 Thinking, lightly edited by resistarchive"
 
 ## **I. Historical Materialist Context: The Crisis of Late Imperialism**
 
-The US government's actions this week reflect **terminal-stage capitalist contradictions**—not policy choices, but structural necessities imposed by the **base-superstructure crisis**. The economic base (overaccumulation, declining rate of profit, loss of hegemony) is forcing the superstructure (state institutions, ideology) into increasingly **coercive**, rather than consensual, forms of rule.
+The US government's actions this week reflect **terminal-stage capitalist contradictions**—not policy choices, but structural necessities imposed by the [**base-superstructure crisis**](https://fantastic-lion-7b1.notion.site/A-quick-lesson-on-contradiction-superstructure-vs-base-146381830dbd8000b990f31be2c5ec0d). The economic base (overaccumulation, declining rate of profit, loss of hegemony) is forcing the superstructure (state institutions, ideology) into increasingly **coercive**, rather than consensual, forms of rule.
 
 **Key Contradiction**: The US bourgeoisie faces an **insurmountable gap** between its **global imperial obligations** (maintaining 800+ military bases, dollar supremacy) and its **eroding domestic productive base** (deindustrialization, financialization, Chinese competition). This drives a **dual strategy**: external aggression to reassert hegemony, and internal repression to manage social fallout.
 
