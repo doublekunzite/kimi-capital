@@ -222,3 +222,21 @@ main {
   .user-message .bubble { max-width: 90%; }
 }
 
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto; /* Pushes footer to bottom when content is short */
+  color: var(--text-secondary);
+  border-top: 1px solid var(--bg-light);
+  background: var(--bg-medium);
+}
+
+footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--kimi-blue);
+}
