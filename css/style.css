@@ -36,6 +36,11 @@ h1 {
   letter-spacing: -0.5px;
 }
 
+header h1 a {
+  color: #c084fc; /* Purple for the & */
+  text-decoration: none;
+}
+
 .kimi { color: var(--kimi-blue); }
 .capital { color: var(--capital-red); }
 
@@ -239,4 +244,12 @@ footer a {
 
 footer a:hover {
   color: var(--kimi-blue);
+}
+
+a:visited {
+  color: #bb86fc; /* Light purple - 7.5:1 contrast on dark background */
+}
+
+a:visited:hover {
+  color: #d8b4fe; /* Even lighter on hover */
 }
