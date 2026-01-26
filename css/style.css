@@ -36,8 +36,9 @@ h1 {
   letter-spacing: -0.5px;
 }
 
+/* Purple "&" in title - parent link is purple, spans override their colors */
 header h1 a {
-  color: #c084fc; /* Purple for the & */
+  color: #c084fc;
   text-decoration: none;
 }
 
@@ -57,6 +58,15 @@ main {
   margin: 0 auto;
   padding: 3rem 1.5rem;
   width: 100%;
+}
+
+/* Better contrast for visited links */
+a:visited {
+  color: #bb86fc;
+}
+
+a:visited:hover {
+  color: #d8b4fe;
 }
 
 /* Blog listing unchanged */
@@ -219,18 +229,11 @@ main {
   font-style: italic;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  body { font-size: 16px; }
-  main { padding: 2rem 1rem; }
-  .post-header-title { font-size: 1.8rem; }
-  .user-message .bubble { max-width: 90%; }
-}
-
+/* Footer styling - centered and at bottom */
 footer {
   text-align: center;
   padding: 2rem;
-  margin-top: auto; /* Pushes footer to bottom when content is short */
+  margin-top: auto;
   color: var(--text-secondary);
   border-top: 1px solid var(--bg-light);
   background: var(--bg-medium);
@@ -246,10 +249,10 @@ footer a:hover {
   color: var(--kimi-blue);
 }
 
-a:visited {
-  color: #bb86fc; /* Light purple - 7.5:1 contrast on dark background */
-}
-
-a:visited:hover {
-  color: #d8b4fe; /* Even lighter on hover */
+/* Mobile */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  main { padding: 2rem 1rem; }
+  .post-header-title { font-size: 1.8rem; }
+  .user-message .bubble { max-width: 90%; }
 }
