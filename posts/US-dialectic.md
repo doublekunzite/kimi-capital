@@ -45,7 +45,7 @@ The White House weighing military options against Iran is **geopolitical crisis 
 - **Military-industrial complex profit** (Lockheed, Raytheon, etc.) 
 
 ### **Class Analysis**
-- **Military-Industrial Fraction**: This capital faction **directly profits** from permanent war. Each intervention transfers massive public wealth to private arms manufacturers .
+- **Military-Industrial Fraction**: This capital faction **directly profits** from permanent war. Each intervention transfers massive public wealth to private arms manufacturers.
 - **Imperialist Logic**: As Lenin analyzed, late capitalism requires **territorial control** and **export of capital** . Iran represents both: oil resources and a market blocked to US capital since 1979.
 - **Crisis Diversion**: Military aggression **temporarily unifies** fragmented working class against external enemy while justifying **domestic austerity** ("we can't afford healthcare, we're at war") .
 
@@ -58,11 +58,11 @@ The White House weighing military options against Iran is **geopolitical crisis 
 ## **IV. Greenland Aggression: Imperialist Re-Territorialization**
 
 ### **Material Basis**
-Climate change is **opening Arctic resources** (rare earth minerals, oil, new shipping routes). Control of Greenland = control of 21st century extractive frontiers .
+Climate change is **opening Arctic resources** (rare earth minerals, oil, new shipping routes). Control of Greenland = control of 21st century extractive frontiers.
 
 ### **Class Analysis**
 - **Inter-Imperialist Rivalry**: Trump demanding Greenland from **NATO ally Denmark** reveals that **geopolitical competition now overrides alliance loyalty**. This is **classic imperialist stage**—scramble for remaining unclaimed resources .
-- **Petty Nationalism**: Mobilizes "America First" ideology to **obscure class divisions** and justify expansionism as "national security" .
+- **Petty Nationalism**: Mobilizes "America First" ideology to **obscure class divisions** and justify expansionism as "national security".
 
 ### **Superstructural Significance**
 - **Ideological justification**: AI-generated images of Greenland/Canada under US flag  show **state ideological apparatus** creating false consciousness—workers identifying with empire rather than class
@@ -72,7 +72,7 @@ Climate change is **opening Arctic resources** (rare earth minerals, oil, new sh
 ## **V. Immigration Crackdown: Creating the Reserve Army**
 
 ### **Material Basis**
-TPS termination (2,000+ Somalis), I-130 restrictions, sanctuary defunding—this **triangulated attack** creates a **larger, more precarious reserve army of labor** .
+Temporary Protected Status (TPS) termination (2,000+ Somalis), I-130 restrictions, sanctuary defunding—this **triangulated attack** creates a **larger, more precarious reserve army of labor**.
 
 ### **Class Analysis**
 - **Wage Suppression**: Deportations and status threats **reduce bargaining power** of *all* workers (documented and undocumented) 
@@ -130,7 +130,7 @@ All policies serve to:
 - **State legitimacy crisis** (courts blocking policies, mass resignations)
 
 ### **Superstructural Crisis**
-The state can no longer afford **consensual hegemony** (social welfare, multiculturalism). It turns to **pure coercion** because **economic base cannot sustain ideological compromise** .
+The state can no longer afford **consensual hegemony** (social welfare, multiculturalism). It turns to **pure coercion** because **economic base cannot sustain ideological compromise**.
 
 ### **Historical Materialist Conclusion**
 These policies are not "Trump's choices" but **structural necessities** for a system where:
@@ -138,6 +138,6 @@ These policies are not "Trump's choices" but **structural necessities** for a sy
 - **Hegemony loss requires ever-more aggression**
 - **Class struggle requires ever-more division**
 
-The **dialectical outcome**: Each attempt to resolve contradictions **accelerates systemic decline**. Sanctuary cuts alienate cities; Iran threats unite Global South against US; Greenland demands fracture NATO; immigration attacks disrupt labor markets. This is **capitalism's self-reinforcing crisis spiral**—the "new normal" is **permanent emergency** .
+The **dialectical outcome**: Each attempt to resolve contradictions **accelerates systemic decline**. Sanctuary cuts alienate cities; Iran threats unite Global South against US; Greenland demands fracture NATO; immigration attacks disrupt labor markets. This is **capitalism's self-reinforcing crisis spiral**—the "new normal" is **permanent emergency**.
 
-The **materialist truth**: The US bourgeoisie is **trapped by its own contradictions**, and these policies are the **death throes of a historically obsolete system** .
+The **materialist truth**: The US bourgeoisie is **trapped by its own contradictions**, and these policies are the **death throes of a historically obsolete system**.
