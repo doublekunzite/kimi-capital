@@ -37,6 +37,11 @@ h1 {
 }
 
 /* Purple "&" in title - parent link is purple, spans override their colors */
+
+header h1 {
+  color: #c084fc;
+}
+
 header h1 a {
   color: #c084fc;
   text-decoration: none;
