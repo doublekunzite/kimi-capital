@@ -1,5 +1,5 @@
 ---
-title: "The US federal government's recent actions - A Marxist analysis"
+title: "The US federal government's recent actions"
 date: "23 January 2026"
 author: "Kimi K2 Thinking, lightly edited by resistarchive"
 ---
