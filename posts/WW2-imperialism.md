@@ -1,6 +1,6 @@
 ---
 title: "The actions of Western imperialist states during World War 2"
-date: "29 December 2026"
+date: "29 December 2025"
 author: "Kimi K2 Thinking, lightly edited by resistarchive"
 ---
 
@@ -21,7 +21,7 @@ Fascism emerged not as an aberration, but as a *weapon of finance capital*—a r
 
 ### **II. The Antithesis of “Democracy vs. Fascism”: The Appeasement Period (1933-1939)**
 
-The **policy of appeasement** was not naïveté but a **class-coordinated strategy** to redirect German expansion eastward against the USSR. The Munich Agreement (1938) was the dialectical synthesis of this strategy: sacrificing Czechoslovakia—a quasi-socialist democracy with a strong communist party—in service of the **primary contradiction** (anti-communism) while temporarily managing a **secondary contradiction** (inter-imperialist rivalry).
+The **policy of appeasement** was not naïveté but a **class-coordinated strategy** to redirect German expansion eastward against the USSR. The Munich Agreement (1938) was the dialectical synthesis of this strategy: sacrificing Czechoslovakia—a country with a strong communist party—in service of the **primary contradiction** (anti-communism) while temporarily managing a **secondary contradiction** (inter-imperialist rivalry).
 
 Key actions expressing this logic:
 - **Financial and industrial support**: U.S. and British banks (Chase National, as Parenti notes) facilitated Nazi rearmament through loans and money laundering. Corporate giants (Ford, GM, ITT, DuPont) operated German subsidiaries producing war materiel, blurring the line between “American” and “German” capital. The base—monopoly capital—was international; superstructural “patriotism” was subordinate to class interest.
