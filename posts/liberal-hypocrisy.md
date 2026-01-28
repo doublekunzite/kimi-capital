@@ -13,7 +13,7 @@ The pattern you identify—liberals' hysterical opposition to "kids in cages" un
 ### The Dialectic of Visibility
 **Under Trump**, ICE operations were conducted **as spectacle**: family separations broadcast, children in cages photographed, agents in military gear staging raids. This **created a crisis of legitimacy**—the state's violence was too visible, threatening bourgeois democracy's ideological claim to "human rights" and "rule of law."
 
-**Under Biden**, the same apparatus received **record funding** ($181.3B in FY2026, building on Biden's increases), but operations became **administrative** rather than spectacular. The violence continues—deportations, detention, family separation—but without the photogenic crisis. This **restores legitimacy** while maintaining the **material base** (labor control, surplus value extraction).
+**Under Biden**, the same apparatus received **record funding**, but operations became **administrative** rather than spectacular. The violence continues—deportations, detention, family separation—but without the photogenic crisis. This **restores legitimacy** while maintaining the **material base** (labor control, surplus value extraction).
 
 The **dialectical synthesis**: Liberals don't "ignore" Biden's ICE; they **support it** because it performs the **same economic function** (labor control) while **preserving the superstructure** (democratic legitimacy, humanitarian rhetoric) that Trump damaged.
 
@@ -37,7 +37,7 @@ Biden's ICE funding trajectory:
 - **FY2021**: $7.4B
 - **FY2022**: $8.3B  
 - **FY2023**: $8.8B
-- **FY2026**: $11.3B base + $170B reconciliation = **$181.3B total** [Source](https://www.clasp.org/publications/fact-sheet/biden-dhs-budget-punitive-immigration/)
+- **FY2026**: $11.3B requested [Source 1](https://www.clasp.org/publications/fact-sheet/biden-dhs-budget-punitive-immigration/)[Source 2](https://www.usaspending.gov/federal_account/070-0540)
 
 This represents **quantitative intensification** of the same apparatus liberals opposed under Trump. Yet **no mass protests** occurred under Biden because:
 
