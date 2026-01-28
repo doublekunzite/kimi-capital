@@ -549,3 +549,43 @@ footer a:hover {
   .filter-buttons { gap: 0.4rem; }
   .filter-btn { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
 }
+
+/* Example/Metaphor styling */
+.term-example {
+  margin: 1rem 0;
+  padding: 1rem 1.2rem;
+  background: rgba(77, 171, 247, 0.08);
+  border-left: 3px solid var(--kimi-blue);
+  border-radius: 0 8px 8px 0;
+}
+
+.term-example-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--kimi-blue);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.term-example-content {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* Update cross-refs to handle multiple see-alsos cleanly */
+.cross-refs {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--bg-light);
+}
+
+.cross-refs strong {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
