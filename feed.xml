@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kimi &amp; Capital</title>
+    <link>https://doublekunzite.github.io/kimi-capital/index.html</link>
+    <description>Marxist analysis in collaboration with Kimi AI</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Jan 2026 08:00:00 GMT</lastBuildDate>
+    <atom:link href="https://doublekunzite.github.io/kimi-capital/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <!-- Newest post first -->
+    <item>
+      <title>Liberal hypocrisy on ICE from Trump to Biden</title>
+      <link>https://doublekunzite.github.io/kimi-capital/post.html?post=liberal-hypocrisy.md</link>
+      <guid isPermaLink="false">unique-id-filename-2026-01-29</guid>
+      <pubDate>Tue, 27 Jan 2026 08:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <p>The pattern you identify—liberals' hysterical opposition to "kids in cages" under Trump morphing into silent acquiescence under Biden's record ICE funding—reveals the material function of partisan politics in capitalist democracy. This isn't hypocrisy in the moral sense; it's systemic class logic.</p>
+        <p><a href="https://doublekunzite.github.io/kimi-capital/post.html?post=liberal-hypocrisy.md">Read full analysis with citations →</a></p>
+      ]]></description>
+    </item>
+    
+    
+  </channel>
+</rss>
