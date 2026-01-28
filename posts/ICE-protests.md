@@ -11,13 +11,12 @@ author: "Kimi K2 Thinking, lightly edited by resistarchive"
 ## **I. ICE as Material Apparatus: The Base-Superstructure Contradiction**
 
 ### **ICE's Economic Function**
-ICE embodies the **material necessity of racialized capitalism** to control labor mobility and maintain a hyper-exploitable workforce. With a **FY2026 budget of $181.3 billion** ($11.3B base + $170B reconciliation bill), ICE has become the **most funded law enforcement agency in US history**. This isn't accidental—it's proportional to capitalism's crisis needs.
+ICE embodies the **material necessity of racialized capitalism** to control labor mobility and maintain a hyper-exploitable workforce. With a **FY2026 budget of $11.3 billion**, ICE has become the **most funded law enforcement agency in US history**. This isn't accidental—it's proportional to capitalism's crisis needs.
 
 **Material Roles ICE Performs:**
 1. **Reserve Army Management**: Creates constant threat of deportation, **suppressing wages** for *all* workers, not just immigrants . Studies show a 1% increase in deportations reduces native worker wages by 0.3-0.5% by expanding the reserve army.
 2. **Labor Segmentation**: Different legal statuses = different wage scales = **higher relative surplus value** extraction .
 3. **Social Reproduction Crisis**: By targeting school nutrition programs, emergency Medicaid, and domestic violence shelters, ICE **destabilizes social reproduction for the entire working class**, making workers more desperate and compliant.
-4. **Military-Industrial Profit**: The $181B flows directly to **private prison corporations** (CoreCivic, GEO Group), defense contractors, and surveillance tech firms—a **direct wealth transfer** from working-class taxpayers to capital.
 
 ### **Class Contradiction Within Capital**
 - **Agrarian/Industrial Capital**: Benefits from deportable workforce for agriculture, meatpacking, construction
@@ -34,7 +33,7 @@ The email you received from Democrats.com represents the **dialectical transform
 **Historical Materialist Trajectory:**
 - **2018 (Thesis)**: "Abolish ICE" emerges from **grassroots migrant justice movements** as a radical demand to dismantle the entire apparatus of racialized border control. It correctly identified ICE as inseparable from capitalism's need for labor control.
 - **2020-2024 (Antithesis)**: Democratic establishment **rejected** the demand, funding ICE at record levels under Biden. The slogan remained marginal.
-- **2025-2026 (Synthesis)**: **"Abolish ICE" becomes mainstream Democratic fundraising tool** precisely when ICE funding reaches its zenith of $181B . This is **not** a victory—it's **complete ideological capture**.
+- **2025-2026 (Synthesis)**: **"Abolish ICE" becomes mainstream Democratic fundraising tool** precisely when ICE funding reaches its zenith of $11.3B . This is **not** a victory—it's **complete ideological capture**.
 
 ### **Material Function of Mainstreaming**
 The Democrats.com email serves several **material functions** for bourgeois democracy:
@@ -54,7 +53,7 @@ What began as a **revolutionary negation** of the state apparatus has become its
 ### **The Material Function of Bourgeois Democracy**
 From a dialectical materialist perspective, **electoral politics in the imperial core** serves a **specific material function** within capitalism:
 
-1. **Legitimation Ritual**: Voting creates the **appearance** that the state serves "the people," masking its **actual function** as the **executive arm of the bourgeoisie**. The $181B ICE budget passed despite public opposition proves this.
+1. **Legitimation Ritual**: Voting creates the **appearance** that the state serves "the people," masking its **actual function** as the **executive arm of the bourgeoisie**. The record ICE budgets passed despite public opposition prove this.
 2. **Safety Valve**: Channels mass discontent into **institutionalized, manageable forms** rather than extra-parliamentary struggle (strikes, occupations, revolts). Writing senators becomes a **substitute for**—not a supplement to—direct action.
 3. **Individualism**: Encourages workers to see themselves as **individual citizens** with individual grievances, not as a **class** with shared material interests. "Your voice matters" ideology obscures that **capital's voice matters more** (lobbyists, campaign donations).
 4. **Time and Energy Sink**: Activism confined to electoral work **exhausts organizers** with endless campaigns that cannot address root contradictions, diverting energy from building working-class power.
@@ -63,7 +62,7 @@ From a dialectical materialist perspective, **electoral politics in the imperial
 **Material outcome**: Writing senators to "abolish ICE" will have **zero material effect** because:
 
 - **Structural Necessity**: ICE exists because **capitalism requires labor control**. No senator can vote to abolish this function without threatening the system that funds their campaigns.
-- **Class Composition**: The Senate is **81% millionaires**—their material interests align with capital, not workers. ICE protects their property and investments.
+- **Class Composition**: The Senate is **approximately two-thirds millionaires**—their material interests align with capital, not workers. ICE protects their property and investments.
 - **Historical Evidence**: Previous "abolish" movements (Prohibition, War on Drugs) resulted in **reorganization, not elimination**, because the underlying material need persisted.
 
 ### **Dialectical Nuance: Reforms Are Possible, But...**
@@ -124,14 +123,14 @@ Minneapolis has particular material conditions:
 - **High concentration of Somali immigrants** targeted by Trump's TPS termination
 - **Strong labor movement history** (2020 uprising, general strike potential)
 - **Progressive bourgeois faction** (Mayor Jacob Frey) that rhetorically opposes ICE but maintains city infrastructure
-- **Material stake**: Over 90,000 jobs in auto sector, immigrant labor crucial to economy 
+- **Material stake**: A significant auto and manufacturing sector, immigrant labor crucial to economy 
 
 ## **II. Class Composition: Petty Bourgeoisie Dominance**
 
 Analysis of protest leadership reveals **petty bourgeois class character**:
 
 ### **NGO-Bureaucratic Layer (Petty Bourgeoisie)**
-- **Indivisible Twin Cities**: Received **$7.8 million from George Soros' Open Society Foundations** (2018-2023) . This is **classic NGO capture**—professional activists with foundation funding, salaries, and institutional interests.
+- **Indivisible Twin Cities**: Received **$7.6 million from George Soros' Open Society Foundations** (2017-2023) . This is **classic NGO capture**—professional activists with foundation funding, salaries, and institutional interests.
 - **Council on American-Islamic Relations (CAIR)**: Executive director Jaylani Hussein leads protests using organizational resources and professional staff.
 - **Nekima Levy Armstrong**: Attorney and civil rights activist—**professional activist class** with media access, law degree, and NGO funding.
 
@@ -149,7 +148,7 @@ The presence of Soros-funded Indivisible reveals the **carrot-and-stick strategy
 
 ### **The Carrot (Reform)**
 - **Ideological function**: "The system is reformable. More confrontational approaches aren't needed" 
-- **Material function**: Professional NGOs absorb revolutionary energy, transform it into **electoral campaigns** and **donation streams**. The $7.8M to Indivisible becomes staff salaries, office rent, and media campaigns—not strike funds or mutual aid.
+- **Material function**: Professional NGOs absorb revolutionary energy, transform it into **electoral campaigns** and **donation streams**. The $7.6M to Indivisible becomes staff salaries, office rent, and media campaigns—not strike funds or mutual aid.
 - **Result**: Protests become **another form of voting**—symbolic expression that **legitimizes the state** by showing "democracy works" (people can protest and be heard).
 
 ### **The Stick (Repression)**
@@ -161,7 +160,7 @@ This mirrors the "No Kings" protests you mention—**Rockefeller/Soros funding e
 
 You correctly identify that **LA anti-ICE actions had different class character**:
 
-### **LA"Riot" Characteristics (Proletarian):**
+### **LA "Uprising" Characteristics (Proletarian):**
 - **Direct confrontation** with property and police, not permitted marches
 - **Spontaneous**, not NGO-organized
 - **Multiracial proletarian participation**: Immigrant workers, unhoused people, precarious youth
