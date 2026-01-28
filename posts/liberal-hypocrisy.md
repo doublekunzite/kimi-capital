@@ -37,7 +37,7 @@ Biden's ICE funding trajectory:
 - **FY2021**: $7.4B
 - **FY2022**: $8.3B  
 - **FY2023**: $8.8B
-- **FY2026**: $11.3B requested [Source 1](https://www.clasp.org/publications/fact-sheet/biden-dhs-budget-punitive-immigration/)[Source 2](https://www.usaspending.gov/federal_account/070-0540)
+- **FY2026**: $11.3B requested [Source 1](https://www.clasp.org/publications/fact-sheet/biden-dhs-budget-punitive-immigration/) [Source 2](https://www.usaspending.gov/federal_account/070-0540)
 
 This represents **quantitative intensification** of the same apparatus liberals opposed under Trump. Yet **no mass protests** occurred under Biden because:
 
