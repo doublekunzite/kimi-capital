@@ -36,8 +36,7 @@ This reflects **material class interest**: the liberal petty bourgeoisie's statu
 Biden's ICE funding trajectory:
 - **FY2021**: $7.4B
 - **FY2022**: $8.3B  
-- **FY2023**: $8.8B
-- **FY2026**: $11.3B requested [Source 1](https://www.clasp.org/publications/fact-sheet/biden-dhs-budget-punitive-immigration/) [Source 2](https://www.usaspending.gov/federal_account/070-0540)
+- **FY2023**: $8.4B [Source](https://www.dhs.gov/sites/default/files/2022-03/U.S.%20Immigration%20and%20Customs%20Enforcement_Remediated.pdf)
 
 This represents **quantitative intensification** of the same apparatus liberals opposed under Trump. Yet **no mass protests** occurred under Biden because:
 
