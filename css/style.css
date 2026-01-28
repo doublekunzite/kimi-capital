@@ -69,13 +69,28 @@ main {
   width: 100%;
 }
 
-/* Better contrast for visited links */
+/* ==================== LINK CONTRAST FIXES ==================== */
+a {
+  color: var(--kimi-blue);
+  text-decoration: underline;
+  text-decoration-color: rgba(77, 171, 247, 0.3);
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--capital-red);
+  text-decoration-color: var(--capital-red);
+}
+
+/* Light lavender for visited links - high contrast on dark bg */
 a:visited {
-  color: #bb86fc;
+  color: #e9d5ff;
+  text-decoration-color: rgba(233, 213, 255, 0.3);
 }
 
 a:visited:hover {
-  color: #d8b4fe;
+  color: #f3e8ff;
+  text-decoration-color: #f3e8ff;
 }
 
 /* Blog listing unchanged */
@@ -209,6 +224,24 @@ a:visited:hover {
 
 .ai-message .bubble li {
   margin-bottom: 0.6rem;
+}
+
+/* Post content links - specific overrides for markdown content */
+.ai-message .bubble a {
+  color: var(--kimi-blue);
+  text-decoration: underline;
+  text-decoration-color: rgba(77, 171, 247, 0.4);
+  border-bottom: none;
+}
+
+.ai-message .bubble a:visited {
+  color: #d8b4fe;
+  text-decoration-color: rgba(216, 180, 254, 0.4);
+}
+
+.ai-message .bubble a:hover {
+  color: var(--capital-red);
+  text-decoration-color: var(--capital-red);
 }
 
 /* Code blocks */
@@ -466,7 +499,7 @@ footer a:hover {
 .term-content p { margin-bottom: 1rem; }
 .term-content p:last-child { margin-bottom: 0; }
 
-/* Cross-references in terms */
+/* Cross-references in terms - specific overrides for glossary */
 .term-content a {
   color: var(--kimi-blue);
   text-decoration: none;
