@@ -1,5 +1,5 @@
 ---
-title: "ICE, protest, and voting in the imperial core"
+title: "ICE, protest, and electoralism in the imperial core"
 date: "26 January 2026"
 author: "Kimi K2 Thinking, lightly edited by resistarchive"
 ---

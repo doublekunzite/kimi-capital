@@ -589,3 +589,25 @@ footer a:hover {
   color: var(--text-secondary);
   font-weight: 600;
 }
+
+.top-nav {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-medium);
+  border-bottom: 1px solid var(--bg-light);
+}
+
+.top-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+  border-bottom: 1px dotted var(--text-muted);
+  padding-bottom: 2px;
+}
+
+.top-nav a:hover {
+  color: var(--kimi-blue);
+  border-bottom-color: var(--kimi-blue);
+}
