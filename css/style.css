@@ -8,6 +8,11 @@
   --text-secondary: #a0a0a0;
   --text-muted: #7a7a7a;
   --bubble-user: #2d3748;
+  /* New category colors for glossary */
+  --philosophy-purple: #c084fc;
+  --economy-amber: #fbbf24;
+  --class-green: #4ade80;
+  --strategy-orange: #fb923c;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -37,7 +42,6 @@ h1 {
 }
 
 /* Purple "&" in title - parent link is purple, spans override their colors */
-
 header h1 {
   color: #c084fc;
 }
@@ -254,10 +258,294 @@ footer a:hover {
   color: var(--kimi-blue);
 }
 
+/* ==================== GLOSSARY STYLES ==================== */
+
+/* Navigation */
+.nav-back {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-dark);
+  border-bottom: 1px solid var(--bg-light);
+}
+
+.nav-back a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.nav-back a:hover { color: var(--kimi-blue); }
+
+/* Glossary uses wider container */
+.glossary-page main {
+  max-width: 800px;
+}
+
+/* Filter Controls */
+.controls {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: var(--bg-medium);
+  border-radius: 12px;
+  border: 1px solid var(--bg-light);
+}
+
+.control-section {
+  margin-bottom: 1.5rem;
+}
+
+.control-section:last-child { margin-bottom: 0; }
+
+.control-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  display: block;
+  font-weight: 600;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  background: var(--bg-light);
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.filter-btn:hover {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.filter-btn.active {
+  background: var(--kimi-blue);
+  color: var(--bg-dark);
+  font-weight: 600;
+}
+
+.filter-btn.philosophy.active { 
+  background: var(--philosophy-purple); 
+  color: var(--bg-dark);
+}
+.filter-btn.economy.active { 
+  background: var(--economy-amber); 
+  color: var(--bg-dark);
+}
+.filter-btn.class-analysis.active { 
+  background: var(--class-green); 
+  color: var(--bg-dark);
+}
+.filter-btn.strategy.active { 
+  background: var(--strategy-orange); 
+  color: var(--bg-dark);
+}
+
+.alpha-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  justify-content: center;
+}
+
+.alpha-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--bg-light);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.alpha-btn:hover {
+  background: var(--kimi-blue);
+  color: var(--bg-dark);
+  transform: scale(1.1);
+}
+
+.alpha-btn.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Stats */
+.glossary-stats {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* Term Cards */
+.term {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: var(--bg-medium);
+  border-radius: 12px;
+  border-left: 4px solid var(--bg-light);
+  transition: all 0.3s;
+  scroll-margin-top: 2rem;
+}
+
+.term:hover {
+  border-left-color: var(--kimi-blue);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.term.philosophy { border-left-color: var(--philosophy-purple); }
+.term.economy { border-left-color: var(--economy-amber); }
+.term.class-analysis { border-left-color: var(--class-green); }
+.term.strategy { border-left-color: var(--strategy-orange); }
+
+.term-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.term-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.term-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  background: var(--bg-light);
+}
+
+.tag.philosophy { background: rgba(192, 132, 252, 0.2); color: var(--philosophy-purple); }
+.tag.economy { background: rgba(251, 191, 36, 0.2); color: var(--economy-amber); }
+.tag.class-analysis { background: rgba(74, 222, 128, 0.2); color: var(--class-green); }
+.tag.strategy { background: rgba(251, 146, 60, 0.2); color: var(--strategy-orange); }
+
+.term-content {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.term-content p { margin-bottom: 1rem; }
+.term-content p:last-child { margin-bottom: 0; }
+
+/* Cross-references in terms */
+.term-content a {
+  color: var(--kimi-blue);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--kimi-blue);
+  transition: all 0.2s;
+}
+
+.term-content a:hover {
+  color: var(--capital-red);
+  border-bottom-color: var(--capital-red);
+}
+
+.cross-refs {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--bg-light);
+}
+
+.cross-refs a {
+  color: var(--kimi-blue);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--kimi-blue);
+  transition: all 0.2s;
+}
+
+.cross-refs a:hover {
+  color: var(--capital-red);
+  border-bottom-color: var(--capital-red);
+}
+
+.key-readings {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg-dark);
+  border-radius: 8px;
+  border-left: 3px solid var(--capital-red);
+}
+
+.key-readings-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--capital-red);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.key-readings-content {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Hide terms when filtered */
+.term.hidden { display: none; }
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+  font-style: italic;
+  display: none;
+}
+
+.empty-state.visible { display: block; }
+
 /* Mobile */
 @media (max-width: 600px) {
   body { font-size: 16px; }
   main { padding: 2rem 1rem; }
   .post-header-title { font-size: 1.8rem; }
   .user-message .bubble { max-width: 90%; }
+  
+  /* Glossary mobile adjustments */
+  .term { padding: 1.5rem; }
+  .term-title { font-size: 1.3rem; }
+  .filter-buttons { gap: 0.4rem; }
+  .filter-btn { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
 }
