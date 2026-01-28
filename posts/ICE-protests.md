@@ -1,7 +1,7 @@
 ---
 title: "ICE, protest, and electoralism in the imperial core"
 date: "26 January 2026"
-author: "Kimi K2 Thinking, lightly edited by resistarchive"
+author: "Kimi K2 Thinking, fact-checked & edited by resistarchive"
 ---
 
 > Analyze the ICE situation in the US from a dialectical materialist perspective. How might the “mainstreaming” of “abolish ICE” fit into this? I received an email from democrats.com telling me to write my senator about abolishing ICE. What would be a dialectical materialist analysis of voting and writing one’s reps in the imperial core?

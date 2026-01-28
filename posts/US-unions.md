@@ -1,7 +1,7 @@
 ---
 title: "Contradictions within unions in the US and Canada"
 date: "20 January 2026"
-author: "Kimi K2 Thinking, lightly edited by resistarchive"
+author: "Kimi K2 Thinking, fact-checked & edited by resistarchive"
 ---
 
 > Analyze modern day unions in the US or Canada from a dialectical materialist perspective. Provide a balanced view that accounts for the fact that these unions do have access to the masses, but have also become reactionary political instruments of the bourgeoisie with top down leadership, led largely by labor aristocrats and white men. Incorporate also an understanding of the contradiction between imperial core workers and global south workers and their differing relations to capital.

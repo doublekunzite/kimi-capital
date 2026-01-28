@@ -1,7 +1,7 @@
 ---
 title: "Tibet before and after China integration"
 date: "15 January 2026"
-author: "Kimi K2 Thinking, lightly edited by resistarchive"
+author: "Kimi K2 Thinking, fact-checked & edited by resistarchive"
 ---
 
 > what material changes in the lives of the Tibetan masses occurred following China's integration of Tibet in the 20th century?

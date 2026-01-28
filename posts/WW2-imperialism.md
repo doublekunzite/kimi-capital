@@ -1,7 +1,7 @@
 ---
 title: "The actions of Western imperialist states during World War 2"
 date: "29 December 2025"
-author: "Kimi K2 Thinking, lightly edited by resistarchive"
+author: "Kimi K2 Thinking, fact-checked & edited by resistarchive"
 ---
 
 > analyze the major actions of Western capitalist states during and leading up to World War 2 from a dialectical and historical materialist perspective.

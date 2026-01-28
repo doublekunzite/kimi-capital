@@ -1,7 +1,7 @@
 ---
 title: "Liberal hypocrisy on ICE from Trump to Biden"
 date: "27 January 2026"
-author: "Kimi K2 Thinking, lightly edited by resistarchive"
+author: "Kimi K2 Thinking, fact-checked & edited by resistarchive"
 ---
 
 > analyze from a dialectical materialist perspective the pattern of liberals ignoring under liberal presidents the same thing that is done under conservatives. for example, Trump's "kids in cages" being a spectacle but the same thing being ignored under Biden. "Trump's ICE" in the spotlight after Biden provided record funding to ICE being ignored.
