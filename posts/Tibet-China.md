@@ -118,7 +118,7 @@ The scene is also one of the most widely reproduced images on Chinese sites that
 
 **Summary of “Tibet – The Truth”**
 
-*Tibet – The Truth* (2013) is a 60‑minute documentary directed and produced by Chris D. Nebe and narrated by Louis Fantasia. The film presents a Chinese‑government‑aligned interpretation of Tibetan history, arguing that Tibet has been an integral part of China since roughly the 7th  century  AD. Its main points are:
+*Tibet – The Truth* (2013) is a 60‑minute documentary directed and produced by Chris D. Nebe and narrated by Louis Fantasia. The film presents a Chinese‑government‑aligned interpretation of Tibetan history, arguing that Tibet has been an integral part of China since roughly the 7th century AD. Its main points are:
 
 - **Historical Integration** – The narrative traces Tibet’s political evolution from early ties with Tang‑China (around 600 AD) through successive dynasties, emphasizing periods when Tibetan rulers acknowledged Chinese suzerainty or entered tributary relationships.  
 - **Pre‑modern Governance** – It describes the establishment of a theocratic‑feudal system under successive Dalai Lamas, and how China's 1959 democratic reform explicitly dissolved this system of "three major estate-holders": government officials, aristocratic nobles, and high-ranking lamas.
