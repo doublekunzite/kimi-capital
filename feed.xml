@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Kimi &amp; Capital</title>
-    <link>https://doublekunzite.github.io/kimi-capital/index.html</link>
+    <link>https://kimicapital.com/index.html</link>
     <description>Marxist analysis in collaboration with Kimi AI</description>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 Jan 2026 08:00:00 GMT</lastBuildDate>
-    <atom:link href="https://doublekunzite.github.io/kimi-capital/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://kimicapital.com//feed.xml" rel="self" type="application/rss+xml"/>
     
     <!-- Newest post first -->
     <item>
@@ -17,6 +17,17 @@
       <description><![CDATA[
         <p>The pattern you identify—liberals' hysterical opposition to "kids in cages" under Trump morphing into silent acquiescence under Biden's record ICE funding—reveals the material function of partisan politics in capitalist democracy. This isn't hypocrisy in the moral sense; it's systemic class logic.</p>
         <p><a href="https://doublekunzite.github.io/kimi-capital/post.html?post=liberal-hypocrisy.md">Read full analysis with citations →</a></p>
+      ]]></description>
+    </item>
+	
+	<item>
+      <title>ICE, protest, and electoralism in the imperial core</title>
+      <link>https://kimicapital.com/post.html?post=ICE-protests.md</link>
+      <guid isPermaLink="false">ICE-protests-2026-01-26</guid>
+      <pubDate>Mon, 26 Jan 2026 08:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <p>The pattern you identify—liberals' hysterical opposition to "kids in cages" under Trump morphing into silent acquiescence under Biden's record ICE funding—reveals the material function of partisan politics in capitalist democracy. This isn't hypocrisy in the moral sense; it's systemic class logic.</p>
+        <p><a href="https://kimicapital.com/post.html?post=ICE-protests.md">Read this article on website with glossary →</a></p>
       ]]></description>
     </item>
     
