@@ -134,7 +134,7 @@ Overall, *“Tibet – The Truth”* seeks to reframe the historical and geopoli
 
 1. [Tibet Since 1951: Liberation, Development and Prosperity](http://english.scio.gov.cn/whitepapers/2021-05/21/content_77516967_6.htm)
 2. [Feudal Serfdom: A Dark History](http://www.china.org.cn/government/whitepaper/2019-03/28/content_74622544.htm)
-3. [Tibet sets "Serfs Emanciipation Day"](https://newyork.china-consulate.gov.cn/eng/xbwz/zt/xzwt/200901/t20090119_5429642.htm)
+3. [Tibet sets "Serfs Emancipation Day"](https://newyork.china-consulate.gov.cn/eng/xbwz/zt/xzwt/200901/t20090119_5429642.htm)
 4. ["Tibet - The Truth" film](https://www.youtube.com/watch?v=4sko0oEKoHk)
 5. [The rapid social development in Tibet](http://www.china.org.cn/e-white/20011108/2.htm)
 6. [Seventy years after its peaceful liberation, Tibet takes on a new look](https://en.people.cn/n3/2021/0520/c90000-9852244.html)
