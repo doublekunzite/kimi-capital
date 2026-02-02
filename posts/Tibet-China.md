@@ -23,7 +23,7 @@ Before 1951, over 90% of Tibet's residents had no private housing and lacked ade
 - Urban per capita disposable income was **RMB 41,156** in 2020 
 
 ## **Infrastructure Development**
-Early projects included Tibet's first hydroelectric station (Ngachen), bringing electric lighting to Lhasa for the first time . By 2020:
+Early projects included Tibet's first hydroelectric station (Ngachen), bringing electric lighting to Lhasa for the first time. By 2020:
 - All border villages gained access to **highways, electricity, postal services, mobile communications, and safe drinking water** 
 - Comprehensive improvements provided water, electricity, gas, telecommunications, radio/TV, and highway access to farming and pastoral areas 
 - Urbanization rate reached **31.5%** by 2019 
