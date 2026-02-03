@@ -9,7 +9,6 @@ function getParam(name) {
 async function loadPost(filename) {
   try {
     const safeFilename = sanitizeFilename(filename);
-    // Use relative path - works on GitHub Pages AND locally
     const response = await fetch(`posts/${safeFilename}`);
     
     if (!response.ok) {
@@ -32,7 +31,6 @@ function parseMarkdownWithFrontmatter(markdown) {
   let metadata = {};
   let messages = [];
 
-  // Parse frontmatter
   if (lines[0] && lines[0].trim() === '---') {
     pos++;
     while (pos < lines.length && lines[pos].trim() !== '---') {
@@ -46,11 +44,10 @@ function parseMarkdownWithFrontmatter(markdown) {
       pos++;
     }
     if (lines[pos] && lines[pos].trim() === '---') {
-      pos++; // Skip closing ---
+      pos++;
     }
   }
 
-  // Parse messages
   let currentMessage = null;
   for (; pos < lines.length; pos++) {
     const line = lines[pos];
@@ -81,9 +78,39 @@ function parseMarkdownWithFrontmatter(markdown) {
   return { metadata, messages };
 }
 
-function renderChat(metadata, messages) {
+// New function: check for hero image and inject if found
+function injectHeroImage(filename) {
+  const baseName = filename.replace(/\.(md|markdown)$/i, '');
+  const extensions = ['jpg', 'jpeg', 'png', 'webp'];
+  
+  // Try to find matching image
+  const imagePromises = extensions.map(ext => {
+    const imgPath = `images/${baseName}.${ext}`;
+    return fetch(imgPath, { method: 'HEAD' })
+      .then(res => res.ok ? imgPath : null)
+      .catch(() => null);
+  });
+  
+  return Promise.race([
+    Promise.all(imagePromises).then(results => results.find(r => r !== null)),
+    new Promise(resolve => setTimeout(() => resolve(null), 1000)) // Timeout
+  ]);
+}
+
+async function renderChat(metadata, messages, postFilename) {
   const container = document.getElementById('chat-container');
   if (!container) return;
+
+  // Inject hero image if exists
+  if (postFilename) {
+    const imagePath = await injectHeroImage(postFilename);
+    if (imagePath) {
+      const heroDiv = document.createElement('div');
+      heroDiv.className = 'hero-image';
+      heroDiv.innerHTML = `<img src="${imagePath}" alt="${metadata.title || ''}">`;
+      container.appendChild(heroDiv);
+    }
+  }
 
   const title = document.createElement('h2');
   title.className = 'post-header-title';
@@ -130,7 +157,6 @@ async function loadPostsList() {
   if (!container) return;
 
   try {
-    // Use relative path
     const response = await fetch('posts.json');
     
     if (!response.ok) {
@@ -165,7 +191,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (postFile) {
     console.log('🔍 Loading post:', postFile);
     const { metadata, messages } = await loadPost(postFile);
-    renderChat(metadata, messages);
+    await renderChat(metadata, messages, postFile);
   } else {
     console.log('🔍 Loading posts list');
     loadPostsList();
